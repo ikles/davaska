@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Главная</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    <main class="main">
+
+
+      <div class="layout_content">
+        <div class="layout_left"></div>
+        <div class="layout_right">
+          <div class="layout_card">
+            Just like you can’t do pushups forever, your brain needs a break too. MW75 Neuro recommends when your brain needs to recharge. Regular breaks reduce burnout and boost productivity.
+          </div>
+          <div class="layout_card">
+            Just like you can’t do pushups forever, your brain needs a break too. MW75 Neuro recommends when your brain needs to recharge. Regular breaks reduce burnout and boost productivity.
+          </div>
+        </div>
+      </div>
+
+
+      <section class="fullscreen">
+        <div class="fullscreen__body">
+          <div class="fullscreen__title">Title title</div>
+          <div class="fullscreen__text">Text text</div>
+          <a href="" class="fullscreen__link">Link Link</a>
+        </div>
+      </section>
+      <section class="fullscreen fullscreen--bg">
+
+      </section>
+      <section class="fullscreen fullscreen--two">
+        <div class="fullscreen__body">
+          <div class="fullscreen__title">Title title 2</div>
+          <div class="fullscreen__text">Text text 2</div>
+          <a href="" class="fullscreen__link">Link Link 2</a>
+        </div>
+      </section>
+      <div class="head screen">
+        <video class="main__video" autoplay="autoplay" loop="loop" preload="auto" muted="muted" poster="img/open-1.jpg" data-object-fit="cover">
+          <source src="video/Screen_Video.mp4" type="video/mp4;" codecs="avc1.42E01E, mp4a.40.2">
+          </video>
+          <div class="head__contain contain">
+            <div class="menu__row">
+              <a href="" class="logo">
+                <img src="img/Logo.svg">
+              </a>
+              <div class="head__menu">
+                <ul>
+                  <li><a href="">О нас</a></li>
+                  <li><a href="">Украшения</a></li>
+                  <li><a href="">Создать украшение</a></li>
+                  <li><a href="">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="head__socs">
+                <a href=""><img src="img/inst.svg" alt=""></a>
+                <a href=""><img src="img/fb.svg" alt=""></a>
+                <a href=""><img src="img/you.svg" alt=""></a>
+              </div>
+            </div>          
+            <div class="open__bot">
+              <div class="open__txt">Откройте прекрасный мир новых возможностей и истинной свободы с Davaska</div>
+              <div class="open__btn-w">
+                <a href="" class="open__btn dark">
+                  Связаться с экспертом                  
+                  <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></span>
+                </a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+
+      </main>
+      @@include('var/_footer.html')    
+    </div>
+    <!--wrapper-->
+
+    @@include('var/_scripts.html')
+  </body>
+  </html>
+
