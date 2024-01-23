@@ -1,6 +1,6 @@
 jQuery(document).ready(function( $ ) {
 
-  
+
 
   $('body').click(function () {
     if( $(".toggle-mnu").hasClass("on") ){
@@ -49,15 +49,90 @@ jQuery(document).ready(function( $ ) {
   }
 
 
-  $('.gal__slider').slick({
-    infinite: false,    
-    speed: 600,
+
+/*Прокрутка колесом мыши*/
+
+/*end Прокрутка колесом мыши*/
+
+
+/*  let count = 0;
+
+  $('.head').bind('mousewheel', function(e){
+    if(e.originalEvent.wheelDelta / 10 > 0) {
+      if (count > 0) {
+        count--;        
+      $('body').removeClass('ohi');
+      }
+      if (count < 1) {
+        $('body').addClass('ohi');
+      }
+      console.log(count);
+    }
+    else{
+      count++;
+      $('.head').css('width', 'calc(100% - '+(count*10)+'px)')
+      .removeClass('w100');
+      if (count > 8) {
+        $('body').removeClass('ohi');
+      }
+      console.log(count);
+    }
+  });*/
+
+
+
+  
+
+  
+
+
+  var topPos2 = $('.top').offset().top; 
+  $(window).scroll(function() {      
+    var top2 = $(document).scrollTop();
+    if (top2 > topPos2) {
+      let radius;
+      if ( (top2 / 5) <= 40 ) {
+        let radius = (top2 / 5);
+        $('.head').css('border-radius', '0 0 '+radius+'px ' + radius+'px');
+      }
+      if ( (top2 / 6) <= 30 ) {
+        let width = 'calc(100% - '+(top2*2)+'px)';        
+        $('.head').css('width', width)
+        .removeClass('w100');
+        //console.log(top2 / 6)
+        
+      }
+      if (top2 < 60) {
+        $('.head').addClass('w100');
+      }     
+    }
+    else {
+
+    }
+  });
+
+  var topPos = (($('.ab').offset().top) - 200);
+  $(window).scroll(function() {
+    var top = $(document).scrollTop();
+    if (top > topPos) {
+      $('.top').addClass('fixed');      
+    }
+    else {
+      $('.top').removeClass('fixed');     
+    }
+  });
+
+
+  $('.open__slider').slick({
+    infinite: true,    
+    speed: 1000,
+    cssEase: 'linear',
+    autoplaySpeed: 900,  
+    fade: true,
     slidesToScroll: 1,
-    autoplay: false,    
-    slidesToShow: 1,
-    cssEase: 'linear',  
-    autoplaySpeed: 0,  
-    arrows: true,
+    autoplay: true,    
+    slidesToShow: 1,    
+    arrows: false,
     pauseOnHover: true,  
   });
 
@@ -109,7 +184,7 @@ $('.eye-3').click(function (e) {
     $('.modal-form__block').click(function (e) {
       e.stopPropagation();  
     });
-    
+
   }
 
   popup('.link2', '.modal-overlay_2', '.modal-close_2');

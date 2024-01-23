@@ -14,14 +14,11 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
-
+<body class="">
   <div class="wrapper">
     @@include('var/_header.html')    
     <main class="main">
-
-
-      <div class="layout_content">
+<!--       <div class="layout_content">
         <div class="layout_left"></div>
         <div class="layout_right">
           <div class="layout_card">
@@ -31,10 +28,10 @@
             Just like you can’t do pushups forever, your brain needs a break too. MW75 Neuro recommends when your brain needs to recharge. Regular breaks reduce burnout and boost productivity.
           </div>
         </div>
-      </div>
+      </div> -->
 
 
-      <section class="fullscreen">
+<!--       <section class="fullscreen">
         <div class="fullscreen__body">
           <div class="fullscreen__title">Title title</div>
           <div class="fullscreen__text">Text text</div>
@@ -50,15 +47,19 @@
           <div class="fullscreen__text">Text text 2</div>
           <a href="" class="fullscreen__link">Link Link 2</a>
         </div>
-      </section>
-      <div class="head screen">
-        <video class="main__video" autoplay="autoplay" loop="loop" preload="auto" muted="muted" poster="img/open-1.jpg" data-object-fit="cover">
-          <source src="video/Screen_Video.mp4" type="video/mp4;" codecs="avc1.42E01E, mp4a.40.2">
-          </video>
-          <div class="head__contain contain">
+      </section> -->
+      <section class="head screen scroll">
+        <div class="top">
+          <div class="delta">0</div>
+          <div class="contain">
             <div class="menu__row">
-              <a href="" class="logo">
-                <img src="img/Logo.svg">
+              <a href="" class="logo">                
+                <svg class="icon">
+                  <use xlink:href="#Logo"></use>
+                </svg>
+                <svg class="icon_dark">
+                  <use xlink:href="#Logo2"></use>
+                </svg>
               </a>
               <div class="head__menu">
                 <ul>
@@ -69,34 +70,117 @@
                 </ul>
               </div>
               <div class="head__socs">
-                <a href=""><img src="img/inst.svg" alt=""></a>
-                <a href=""><img src="img/fb.svg" alt=""></a>
-                <a href=""><img src="img/you.svg" alt=""></a>
-              </div>
-            </div>          
-            <div class="open__bot">
-              <div class="open__txt">Откройте прекрасный мир новых возможностей и истинной свободы с Davaska</div>
-              <div class="open__btn-w">
-                <a href="" class="open__btn dark">
-                  Связаться с экспертом                  
-                  <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg></span>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="#inst"></use>
+                  </svg>
+                  <svg class="icon_dark">
+                    <use xlink:href="#inst2"></use>
+                  </svg>
                 </a>
-              </div>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="#fb"></use>
+                  </svg>
+                  <svg class="icon_dark">
+                    <use xlink:href="#fb2"></use>
+                  </svg>
+                </a>
+                <a href="">
+                 <svg class="icon">
+                  <use xlink:href="#you"></use>
+                </svg>
+                <svg class="icon_dark">
+                  <use xlink:href="#you2"></use>
+                </svg>
+              </a>
             </div>
-
-
+          </div>          
+        </div>          
+      </div>
+      <video class="main__video" autoplay="autoplay" loop="loop" preload="auto" muted="muted" poster="img/open-1.jpg" data-object-fit="cover">
+        <source src="video/Screen_Video.mp4" type="video/mp4;" codecs="avc1.42E01E, mp4a.40.2">
+        </video>
+        <div class="head__contain contain">
+          <div class="open__bot">
+            <div class="open__slider">
+              <div class="slider-open__item">Откройте прекрасный мир новых возможностей и истинной свободы с Davaska</div>
+              <div class="slider-open__item">Откройте сердце – для новых эмоций</div>
+              <div class="slider-open__item">Откройте свой ум – к восприятию красоты</div>
+              <div class="slider-open__item">Откройте свое сознание – к магии жизни</div>                
+            </div>
+            <div class="open__btn-w">
+              <a href="" class="btn">Связаться с экспертом</a>
+            </div>
           </div>
         </div>
+      </section>
+      <section class="ab">
+        <div class="contain">
+          <div class="h2 ab__h">О нас:</div>
+          <div class="ab__w">
+            <div class="ab__col">
+              <p>Davaska – это бренд загадка, бренд вызов! <br />
+              Созданный в грациозной оболочке элитных драгоценных металлов и наполненный магией таинственного, запредельного и вечного.</p>
+              <p><strong>Каждое украшение пропитано энергетикой неповторимости и красоты, открывающей путь <br /> к новым вершинам и волшебству.</strong>
+              </p>
+              <p>Сакральный смысл бренда символизирует мощь человеческого развития, благородство и стойкость <br />
+              перед лицом обстоятельств.</p>
+            </div>
+            <div class="ab__col">
+              <p><strong>Украшения Davaska, усиливают энергетическую связь<br />
+                с драгоценными камнями, расширяя энергетический<br />
+              спектр человека.</strong></p>
+              <p>Олицетворяют Вечную силу, целеустремленность<br />
+                и процветание. Помогают всегда пребывать<br />
+              в полноте мгновения и преобладать над заурядностью жизни.</p>
+            </div>
+          </div>
+          <div class="open__btn-w">
+            <a href="" class="btn dark">Связаться с экспертом</a>
+          </div>
+        </div>
+      </section>
+      <section class="ind">
+        <div class="contain">
+          <div class="ind__w">
+            <div class="ind__l">
+              <ul class="ind__ul">
+                <li class="ind__li">
+                  <a href="" class="ind__link active">Индивидуальность и статус</a>
+                </li>
+              </ul>
+              
+              <p>Украшения Davaska созданы для самодостаточных и сильных духом людей. Тех, кому присуща внутренняя свобода и стремление к успеху. Этот бренд для настоящих победителей – тех, кто берет от жизни все, пребывая в гармонии со своим внутренним «Я».</p>
+
+              <p><strong>Бренд подчеркивает индивидуальность и выгодно выделяет владельца на фоне остальных. Раскрывает статус и неповторимость, дополняет деловые качества и формирует стиль. Владелец украшений Davaska - не такой как все. <br>Он особенный!</strong></p>
+            </div>
+            <div class="ind__r">
+              <div class="ind__img">
+                <img src="img/ind.jpg">
+              </div>
+              <div class="ind__img">
+                <img src="img/ind2.jpg">
+              </div>
+              <div class="ind__img">
+                <img src="img/ind3.jpg">
+              </div>
+              <div class="ind__img">
+                <img src="img/ind4.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
-      </main>
-      @@include('var/_footer.html')    
-    </div>
-    <!--wrapper-->
 
-    @@include('var/_scripts.html')
-  </body>
-  </html>
+    </main>
+    @@include('var/_footer.html')    
+  </div>
+  <!--wrapper-->
+
+  @@include('var/_scripts.html')
+</body>
+</html>
 
