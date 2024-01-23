@@ -557,11 +557,37 @@ body {
   color: #FFF;      
 }
 
+.ind__ul {
+  margin-bottom: 164px;
+  li {
+    margin-bottom: 20px;
+    a {
+      font-size: 37px;
+      font-weight: 500;
+      color: #ffffff;
+      &.active {  
+        color: rgb(209, 195, 172);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
 .ind__l {
+  height: 100vh;
+  position: sticky;
+  top: 0;
   width: 50%;
-  background-color: rgb(0, 0, 0);
-  padding: 55px 31px 34px 42px;
-  border-radius: 5px;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
   p {
     font-size: 25px;
     line-height: 132%;
@@ -571,35 +597,17 @@ body {
   }
 }
 
-.ind__ul {
-  margin-bottom: 164px;
+
+.ind__img img,
+.ind__inn {
+  height: 836px;
+}
+.ind__inn {
+  background-color: rgb(0, 0, 0);
+  padding: 55px 31px 34px 42px;
+  border-radius: 20px;  
 }
 
-.ind__li {
-  margin-bottom: 20px;
-}
-
-
-.ind__link {
-  font-size: 37px;
-  font-weight: 500;
-  color: #ffffff;
-  &.active {  
-    color: rgb(209, 195, 172);
-  }
-}
-
-
-
-.ind__text-b {
-
-}
-
-.ind__l {
-  height: 100vh;
-  position: sticky;
-  top: 0;
-}
 .ind__r {
   width: 50%;
 }
@@ -746,3 +754,95 @@ body {
   }
 
   /*end webflow*/
+  
+
+  /*stycky slider*/
+  
+  body {
+    font-family: "Century Gothic", 'Lato', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .et-hero-tabs,
+  .et-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+    padding: 0 2em;
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+      letter-spacing: 1rem;
+    }
+    h3 {
+      font-size: 1rem;
+      letter-spacing: 0.3rem;
+      opacity: 0.6;
+    }
+  }
+
+  .et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+    &--top {
+      position: fixed;
+      top: 0;
+    }
+  }
+
+  .et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+    &:hover {
+      color:white;
+      background: rgba(102,177,241,0.8);
+      transition: all 0.5s ease;
+    }
+  }
+
+  .et-hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background: #66B1F1;
+    transition: left 0.3s ease;
+  }
+
+  @media (min-width: 800px) {
+    .et-hero-tabs,
+    .et-slide {
+      h1 {
+        font-size: 3rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+    }
+    .et-hero-tab {
+      font-size: 1rem;
+    }
+  }
+
+  /*stycky slider*/
