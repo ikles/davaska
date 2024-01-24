@@ -89,7 +89,6 @@ jQuery(document).ready(function( $ ) {
     }
   });
 
-
   $(".top-mnu").click(function (e) {
     e.stopPropagation();
   });
@@ -101,6 +100,18 @@ jQuery(document).ready(function( $ ) {
     $('.header__col').toggleClass("open");    
   });
 
+
+  function tabs(element) {    
+    $(element).find('.tabs__list-item').click(function () {
+      $(element).find('.tabs__list-item').removeClass('active');
+      $(this).addClass('active');    
+      let num = $(this).index();
+      $(element).find('.tabs__content-list-item').removeClass('active');
+      $(element).find('.tabs__content-list-item').eq(num).addClass('active');  
+    });
+  }
+
+  tabs('.create__tabs');
 
 
 //levels menu
@@ -166,7 +177,7 @@ jQuery(document).ready(function( $ ) {
     'autoSize' : false,
     arrows: true,
     infobar: false,
-    smallBtn: false,
+    smallBtn: true,
     toolbar: false,
     parentEl: "body",
     iframe : {
