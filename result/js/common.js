@@ -3,7 +3,7 @@ jQuery(document).ready(function( $ ) {
 /*sticky slider*/
 
 
-  class StickyNavigation {
+/*  class StickyNavigation {
     
     constructor() {
       this.currentId = null;
@@ -77,7 +77,7 @@ jQuery(document).ready(function( $ ) {
     
   }
 
-  new StickyNavigation();
+  new StickyNavigation();*/
 
 /*end sticky slider*/
 
@@ -161,6 +161,23 @@ jQuery(document).ready(function( $ ) {
 
 
 
+  $('[data-fancybox="gallery"]').fancybox({
+    'width':755,    
+    'autoSize' : false,
+    arrows: true,
+    infobar: false,
+    smallBtn: false,
+    toolbar: false,
+    parentEl: "body",
+    iframe : {
+      css : {
+        width : '450px'
+      }
+    },    
+    slideClass: "catgal__slide",
+    baseClass: "catgal__container"
+  });
+
   
 
   //const topPosIndRight = $('.ind__r').offset().top;
@@ -171,7 +188,7 @@ jQuery(document).ready(function( $ ) {
     
 
     if (top3 > topPosIndImg) {
-      console.log('22');
+      //console.log('22');
     }
   });
   
