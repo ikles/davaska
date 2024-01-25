@@ -24,10 +24,7 @@
 <![endif]-->
 </head>
 <body class="">
-  <div class="wrapper">
-    <header class="header">
-
-</header>    
+  <div class="wrapper">    
     <main class="main">
 <!--       <div class="layout_content">
         <div class="layout_left"></div>
@@ -59,12 +56,12 @@
           <a href="" class="fullscreen__link">Link Link 2</a>
         </div>
       </section> -->
-      <section class="head screen scroll">
+      <section class="head screen scroll" id="head">
         <div class="top">
           <div class="delta">0</div>
           <div class="contain">
             <div class="menu__row">
-              <a href="" class="logo">                
+              <a href="index.html" class="logo">                
                 <svg class="icon">
                   <use xlink:href="#Logo"></use>
                 </svg>
@@ -74,7 +71,7 @@
               </a>
               <div class="head__menu">
                 <ul>
-                  <li><a href="">О нас</a></li>
+                  <li><a href="#ab">О нас</a></li>
                   <li><a href="">Украшения</a></li>
                   <li><a href="">Создать украшение</a></li>
                   <li><a href="">Контакты</a></li>
@@ -126,29 +123,23 @@
           </div>
         </div>
       </section>
-      <section class="ab">
+      <section class="ab" id="ab">
         <div class="contain">
-          <div class="h2 ab__h">О нас:</div>
+          <div class="ab__h">О нас</div>
           <div class="ab__w">
             <div class="ab__col">
-              <p>Davaska – это бренд загадка, бренд вызов! <br />
-              Созданный в грациозной оболочке элитных драгоценных металлов и наполненный магией таинственного, запредельного и вечного.</p>
-              <p><strong>Каждое украшение пропитано энергетикой неповторимости и красоты, открывающей путь <br /> к новым вершинам и волшебству.</strong>
+              <p>Davaska – это бренд загадка, бренд вызов! Созданный в грациозной оболочке элитных драгоценных металлов и наполненный магией таинственного, запредельного и вечного.</p>
+              <p><strong>Каждое украшение пропитано энергетикой неповторимости и красоты, открывающей путь к новым вершинам и волшебству.</strong>
               </p>
-              <p>Сакральный смысл бренда символизирует мощь человеческого развития, благородство и стойкость <br />
-              перед лицом обстоятельств.</p>
+              <p>Сакральный смысл бренда символизирует мощь человеческого развития, благородство и стойкость перед лицом обстоятельств.</p>
             </div>
             <div class="ab__col">
-              <p><strong>Украшения Davaska, усиливают энергетическую связь<br />
-                с драгоценными камнями, расширяя энергетический<br />
-              спектр человека.</strong></p>
-              <p>Олицетворяют Вечную силу, целеустремленность<br />
-                и процветание. Помогают всегда пребывать<br />
-              в полноте мгновения и преобладать над заурядностью жизни.</p>
+              <p><strong>Украшения Davaska, усиливают энергетическую связь с драгоценными камнями, расширяя энергетический спектр человека.</strong></p>
+              <p>Олицетворяют Вечную силу, целеустремленность и процветание. Помогают всегда пребывать в полноте мгновения и преобладать над заурядностью жизни.</p>
             </div>
           </div>
-          <div class="open__btn-w">
-            <a href="" class="btn dark">Связаться с экспертом</a>
+          <div class="ab__btn-w">
+            <a href="" class="btn dark ab__btn">Связаться с экспертом</a>
           </div>
         </div>
       </section>
@@ -339,6 +330,9 @@
               </div>
             </div>
           </div>
+          <div class="jcc">
+            <a href="" class="btn dark">Связаться с экспертом</a>
+          </div>
         </div>
       </section>
 
@@ -350,28 +344,110 @@
             <div class="tabs create__tabs">
               <ul class="tabs__list">
                 <li class="tabs__list-item active"><span>ИДЕИ И ДИЗАЙН</span><i>1</i></li>
-                <li class="tabs__list-item"><span>ВОСКОВАЯ МОДЕЛЬ И УТВЕРЖДЕНИЕ</span><i>2</i></li>  
+                <li class="tabs__list-item"><span>ВОСКОВАЯ МОДЕЛЬ И УТВЕРЖДЕНИЕ</span><i>2</i></li>
+                <li class="tabs__list-item"><span>УСТАНОВКА КАМНЕЙ</span><i>3</i></li>
+                <li class="tabs__list-item"><span>ГОТОВОЕ УКРАШЕНИЕ</span><i>4</i></li>
               </ul>
               <ul class="tabs__content-list">
                 <li class="tabs__content-list-item active">
-                  <a href="" class="create__img"><img src="img/create-1.jpeg"></a>
-                  <p class="create__txt">Мы поможем воплотить все ваши мечты в реальность. С нашим личным ювелирным дизайнером вы сможете создать идеальное украшение, обсудив эскиз и детали. </p><p class="create__txt">Ваше украшение может быть простым, с индивидуальной гравировкой, или восстановлением и переделкой семейной реликвии. Мы превратим самые смелые идеи из вашего воображения в изысканную реальность.</p>
+                  <img src="img/create-1.jpeg">
+                  <p>Мы поможем воплотить все ваши мечты в реальность. С нашим личным ювелирным дизайнером вы сможете создать идеальное украшение, обсудив эскиз и детали. </p><p>Ваше украшение может быть простым, с индивидуальной гравировкой, или восстановлением и переделкой семейной реликвии. Мы превратим самые смелые идеи из вашего воображения в изысканную реальность.</p>
                 </li>
-                <li class="tabs__content-list-item">22</li>  
+                <li class="tabs__content-list-item">
+                  <img src="img/create-2.jpeg">
+                  <p>После встречи с нашим ювелирным дизайнером и согласования дизайна мы создадим точную восковую модель, которую вы сможете тщательно изучить и окончательно утвердить.</p>
+                </li>  
+                <li class="tabs__content-list-item">
+                  <img src="img/create-3.jpg">
+                  <p>После утверждения восковой модели, наши мастера изготовят ваше украшение из выбранного вами металла. Затем опытные ювелиры вставят в него бриллианты или другие драгоценные камни, по вашему выбору.</p>
+                </li>
+                <li class="tabs__content-list-item _center">
+                  <p>Наши ювелиры вручную отполировывают и доводят до совершенства каждое изделие, которое затем представляется вам. Обычно проходит около трех недель с момента утверждения модели до того, как вы получите свое уникальное украшение в руки.</p>
+                  <p>Подарите вашему изделию индивидуальное послание, будь то особая дата, имя ребенка, восхищенная фраза, такая как "люблю тебя больше" или простая монограмма с их инициалами и специальными символами - наши современные гравировки открывают безграничные возможности.</p>
+                  <p>Выразите свою преданность и индивидуальность через наши уникальные украшения. Вместе мы создадим нечто по-настоящему особенное, которое будет воплощать вашу уникальность и стиль. Davaska - ваш источник изысканных и персонализированных ювелирных украшений высочайшего качества.</p>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
+      <section class="loc">
+        <div class="contain">
+          <div class="loc__w">
+            <div class="loc__col">
+              <a class="loc__img-w"><img src="img/loc.jpeg" class="loc__img" /></a>
+              <div class="loc__desc">
+                Ювелирный шоу-рум «Davaska» расположен в самом сердце Дубая,<br />
+                в Dubai Multi Commodities Centre (DMCC).
+              </div>
+            </div>
+            <div class="loc__map"><img src="img/map.jpeg" class="loc__map-img" /></div>
+            <form class="popform">
+              <span class="popform__close"></span>
+              <div class="popform__txt">
+                Благодарим Вас за интерес к нашему бренду! Пожалуйста, заполните форму, мы свяжемся с вами в течение 24 часов. Вы также можете связаться с нами напрямую по телефону или электронной почте. <br />
+                С нетерпением ждем сотрудничества с вами!
+              </div>
+              <input class="popform__input-text" type="text" placeholder="Ваше имя " /><input class="popform__input-text" type="text" placeholder=" e-mail" /><input class="popform__input-text" type="text" placeholder=" телефон" />
+              <div class="popform__btn-w">
+                <button class="btn">Отправить</button>
+              </div>
+            </form>            
+          </div>
+          <div class="jcc">
+            <a href="" class="btn dark">Связаться с экспертом</a>
+          </div>
+        </div>
+      </section>
+    </main>    
+    <footer class="footer">
+      <div class="contain">
+        <div class="footer__w">
+          <div class="footer__l">
+            <a href="index.html" class="footer__logo"><img src="img/logo-footer.svg"></a>
+            <ul class="footer__ul">
+              <li><a href="">О НАС </a></li>
+              <li><a href="">украшения </a></li>
+              <li><a href="">СОЗДАТЬ СВОЕ украшение</a></li>
+              <li><a href="">КОНТАКТЫ</a></li>
+            </ul>
+          </div>
+          <div class="footer__r">            
+            <a href="#head" class="footer__arr-up"></a>
+            <div class="head__socs">
+              <a href="">
+                <svg class="icon">
+                  <use xlink:href="#inst"></use>
+                </svg>
+                <svg class="icon_dark">
+                  <use xlink:href="#inst2"></use>
+                </svg>
+              </a>
+              <a href="">
+                <svg class="icon">
+                  <use xlink:href="#fb"></use>
+                </svg>
+                <svg class="icon_dark">
+                  <use xlink:href="#fb2"></use>
+                </svg>
+              </a>
+              <a href="">
+               <svg class="icon">
+                <use xlink:href="#you"></use>
+              </svg>
+              <svg class="icon_dark">
+                <use xlink:href="#you2"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!--wrapper-->
 
-    </main>
-    <footer class="footer">  
-  
-</footer>
-  </div>
-  <!--wrapper-->
-
-  <script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/slick.js"></script>
 <!-- <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=<e28ccc70-b9f5-4f7b-aec4-03bab1133076>" type="text/javascript"></script>
   <script async src="js/placemark.js"></script> -->
