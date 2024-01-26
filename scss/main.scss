@@ -101,7 +101,7 @@ svg.hidden {
   width: 100%;
   margin-left: auto;
   margin-right: auto;  
-  overflow: hidden;
+  //overflow: hidden;
   display: flex;    
   flex-direction: column;    
   min-height: 100vh;
@@ -583,25 +583,46 @@ body {
 }
 
 .ind__ul {
-  margin-bottom: 164px;
+  margin-bottom: auto;
   li {
-    margin-bottom: 20px;
-    a {
+    + li {
+      margin-top: 20px;
+    }
+    a {      
       font-size: 37px;
       font-weight: 500;
       color: #ffffff;
-      &.active {  
-        color: rgb(209, 195, 172);
-      }
+      cursor: auto; 
+      @media (any-hover: hover) {
+       &:hover {
+         text-decoration: none;
+       }
+     }     
+   }
+   &.active {
+    a {
+      color: rgb(209, 195, 172);        
     }
   }
 }
+}
 
 
-
-
-
-
+.ind__content-list {
+  position: relative;
+  li {
+    transition: 0.5s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
 
 
 .ind__l {
@@ -630,12 +651,13 @@ body {
 .ind__inn {
   background-color: rgb(0, 0, 0);
   padding: 55px 31px 34px 42px;
-  border-radius: 20px;  
+  border-radius: 20px; 
+  display: flex;  
+  flex-direction: column; 
 }
 
 .ind__r {
-  width: 50%;
-  position: relative;
+  width: 50%;  
 }
 .ind__img {  
   height: 100vh;
@@ -644,10 +666,12 @@ body {
   justify-content: center;
   align-items: center;    
   display: flex;    
-  position: sticky;
-  position: absolute;
-  top: 0;
-  overflow: hidden;  
+  position: sticky; 
+  overflow: hidden; 
+  top: 0;  
+  &.active {
+
+  }
   img {
     max-width: 100%;
   }
@@ -1182,6 +1206,31 @@ body {
   margin-right: 235px;
 }
 
+footer,
+section {
+  display: none $i;
+  &.ind {
+    display: block $i;
+  }
+  &.et-slide,
+  &.et-hero-tabs,
+  &.ab,
+  &.cat {
+    display: block $i;
+  }
+}
+
+.et-slides__row {
+  display: flex;
+}
+
+.et-slides__r {
+  width: 50%;
+}
+
+.et-slides__l {
+  width: 50%;
+}
 
 //2000
 
@@ -1289,24 +1338,28 @@ body {
   }
   .layout_left {  
     width: 50%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
   }
 
   .layout_right {
     width: 50%;
   }
 
-  .layout_card {    
+  .layout_card {
+    width: 100%;    
     height: 100vh;
     border-radius: 24px;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
     display: flex;    
+    background-color: #FFF;
+    border: 5px solid #ccc;
     position: sticky;
     top: 0;
     overflow: hidden;
-    background-color: #FFF;
-    border: 5px solid #ccc;
   }
 
   /*end webflow*/
@@ -1314,15 +1367,8 @@ body {
 
   /*stycky slider*/
   
-  body {
-    font-family: "Century Gothic", 'Lato', sans-serif;
-  }
 
-  a {
-    text-decoration: none;
-  }
-
-  .et-hero-tabs,
+/*  .et-hero-tabs,
   .et-slide {
     display: flex;
     flex-direction: column;
@@ -1399,6 +1445,6 @@ body {
     .et-hero-tab {
       font-size: 1rem;
     }
-  }
+    }*/
 
   /*stycky slider*/
