@@ -250,6 +250,10 @@ jQuery(document).ready(function( $ ) {
   });
 
 
+  $('.popform__close').click(function () {
+    $('.popform').fadeOut();
+  });
+
   
 
   $('.ind__ul li a').click(function (e) {

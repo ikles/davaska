@@ -62,9 +62,9 @@
               <div class="head__menu">
                 <ul>
                   <li><a href="#ab">О нас</a></li>
-                  <li><a href="">Украшения</a></li>
-                  <li><a href="">Создать украшение</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li><a href="#cat">Украшения</a></li>
+                  <li><a href="#create">Создать украшение</a></li>
+                  <li><a href="#loc">Контакты</a></li>
                 </ul>
               </div>
               <div class="head__socs">
@@ -106,10 +106,13 @@
               <div class="slider-open__item">Откройте сердце – для новых эмоций</div>
               <div class="slider-open__item">Откройте свой ум – к восприятию красоты</div>
               <div class="slider-open__item">Откройте свое сознание – к магии жизни</div>                
+            </div>            
+            <div class="open__btn-w">              
+              @@include('var/_btn.html',{
+                "cls":""
+              })              
             </div>
-            <div class="open__btn-w">
-              <a href="" class="btn">Связаться с экспертом</a>
-            </div>
+
           </div>
         </div>
       </section>
@@ -128,9 +131,11 @@
               <p>Олицетворяют Вечную силу, целеустремленность и процветание. Помогают всегда пребывать в полноте мгновения и преобладать над заурядностью жизни.</p>
             </div>
           </div>
-          <div class="ab__btn-w">
-            <a href="" class="btn dark ab__btn">Связаться с экспертом</a>
-          </div>
+          <div class="jcc">
+            @@include('var/_btn.html',{
+              "cls":"dark"
+            })
+          </div>          
         </div>
       </section>
 
@@ -188,10 +193,13 @@
               </li>
             </ul>
           </div>
+          <div class="jcc">
+            <a href="" class="btn dark"> Связаться с экспертом</a>
+          </div>
         </div>
       </section>
 
-      <section class="cat">
+      <section class="cat" id="cat">
         <div class="contain">
           <div class="cat__title">Подари эмоции с Davaska</div>
           <div class="cat__desc">
@@ -250,7 +258,7 @@
             </a>
           </div>
 
-          <div class="btn__black-w">
+          <div class="jcc">
             <a href="" class="btn dark"> Связаться с экспертом</a>
           </div>
         </div>
@@ -312,7 +320,7 @@
         </div>
       </section>
 
-      <section class="create">
+      <section class="create" id="create">
         <div class="contain">
           <div class="create__head">Создать свое украшение</div>
           <div class="create__w">
@@ -347,17 +355,9 @@
           </div>
         </div>
       </section>
-      <section class="loc">
+      <section class="loc" id="loc">
         <div class="contain">
           <div class="loc__w">
-            <div class="loc__col">
-              <a class="loc__img-w"><img src="img/loc.jpeg" class="loc__img" /></a>
-              <div class="loc__desc">
-                Ювелирный шоу-рум «Davaska» расположен в самом сердце Дубая,<br />
-                в Dubai Multi Commodities Centre (DMCC).
-              </div>
-            </div>
-            <div class="loc__map"><img src="img/map.jpeg" class="loc__map-img" /></div>
             <form class="popform">
               <span class="popform__close"></span>
               <div class="popform__txt">
@@ -368,8 +368,17 @@
               <div class="popform__btn-w">
                 <button class="btn">Отправить</button>
               </div>
-            </form>            
+            </form>
+            <div class="loc__col">
+              <a class="loc__img-w"><img src="img/loc.jpeg" class="loc__img" /></a>
+              <div class="loc__desc">
+                Ювелирный шоу-рум «Davaska» расположен в самом сердце Дубая,<br />
+                в Dubai Multi Commodities Centre (DMCC).
+              </div>
+            </div>
+            <div class="loc__map"><img src="img/map.jpg" class="loc__map-img" /></div>
           </div>
+
           <div class="jcc">
             @@include('var/_btn.html',{
               "cls":"dark"

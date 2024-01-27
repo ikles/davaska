@@ -53,7 +53,8 @@ $ff2: 'Open Sans', sans-serif;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none;  
+  transition: color 0.33s;
   &:hover {
     text-decoration: underline;
   }
@@ -547,6 +548,7 @@ body {
 .ab__w {
   display: flex;
   gap: 89px;
+  margin-bottom: 50px;
 }
 
 .ab__col {
@@ -567,7 +569,7 @@ body {
 .ab__btn-w {
   display: flex;  
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 50px;  
 }
 
 
@@ -1047,20 +1049,22 @@ body {
 
 .loc__img-w {
   display: flex;
-  width: 407px;
-  height: 255px;
+  width: 100%;  
   align-items: center;
-  justify-content: center;
-  border-radius: 10px;
+  justify-content: center;  
   overflow: hidden;
   margin-bottom: 41px;
   flex: 0 0 auto;
   width: 100%;  
   align-items: flex-start; 
   img {
+    line-height: 0;
+    font-size: 0;
+    display: block;
     max-width: 100%;
+    height: auto;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
   }
 }
 
@@ -1077,8 +1081,13 @@ body {
 .loc__map {
   width: 75%;
   overflow: hidden;
-  border-radius: 20px;  
+  border-radius: 15px;  
   flex-grow: 1;
+  img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+  }
 }
 
 .popform {
@@ -1132,15 +1141,18 @@ body {
   right: 20px;
 }
 
-.loc__map-img {
-  width: 100%;
-}
+
 
 
 .footer {
   background: rgb(0, 0, 0);
   padding-top: 74px;
-  padding-bottom: 74px;
+  padding-bottom: 74px;  
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .contain {
@@ -1208,15 +1220,15 @@ body {
 
 footer,
 section {
-  display: none $i;
+  /*display: none $i;*/
   &.ind {
-    display: block $i;
+    /*display: block $i;*/
   }
   &.et-slide,
   &.et-hero-tabs,
   &.ab,
   &.cat {
-    display: block $i;
+    /*display: block $i;*/
   }
 }
 
@@ -1245,6 +1257,9 @@ section {
     }
   } 
 }//1600
+
+
+
 
 @import "_after-styless";
 

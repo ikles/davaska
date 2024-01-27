@@ -332,7 +332,8 @@ img {
   display: none; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 0.33s; }
   a:hover {
     text-decoration: underline; }
 
@@ -767,7 +768,8 @@ body.touch .sub-sub-menu__list.open {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 89px; }
+  gap: 89px;
+  margin-bottom: 50px; }
 
 .ab__col {
   width: 50%; }
@@ -1257,15 +1259,13 @@ body.touch .sub-sub-menu__list.open {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 407px;
-  height: 255px;
+  width: 100%;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 10px;
   overflow: hidden;
   margin-bottom: 41px;
   -webkit-flex: 0 0 auto;
@@ -1276,9 +1276,13 @@ body.touch .sub-sub-menu__list.open {
       -ms-flex-align: start;
           align-items: flex-start; }
   .loc__img-w img {
+    line-height: 0;
+    font-size: 0;
+    display: block;
     max-width: 100%;
+    height: auto;
     overflow: hidden;
-    border-radius: 10px; }
+    border-radius: 15px; }
 
 .loc__img {
   width: 100%; }
@@ -1291,10 +1295,14 @@ body.touch .sub-sub-menu__list.open {
 .loc__map {
   width: 75%;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 15px;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  .loc__map img {
+    max-width: 100%;
+    height: auto;
+    width: 100%; }
 
 .popform {
   background: black;
@@ -1347,13 +1355,12 @@ body.touch .sub-sub-menu__list.open {
   top: 20px;
   right: 20px; }
 
-.loc__map-img {
-  width: 100%; }
-
 .footer {
   background: black;
   padding-top: 74px;
   padding-bottom: 74px; }
+  .footer a:hover {
+    text-decoration: none; }
 
 .footer__w {
   display: -webkit-flex;
@@ -1413,16 +1420,16 @@ body.touch .sub-sub-menu__list.open {
 
 footer,
 section {
-  display: none !important; }
+  /*display: none $i;*/ }
   footer.ind,
   section.ind {
-    display: block !important; }
+    /*display: block $i;*/ }
   footer.et-slide, footer.et-hero-tabs, footer.ab, footer.cat,
   section.et-slide,
   section.et-hero-tabs,
   section.ab,
   section.cat {
-    display: block !important; }
+    /*display: block $i;*/ }
 
 .et-slides__row {
   display: -webkit-flex;
@@ -1439,6 +1446,15 @@ section {
   .head__menu li a {
     font-size: 22px; } }
 
+.ab,
+.loc,
+.create,
+.acc,
+.cat,
+.ind,
+.head {
+  /*display: none;*/ }
+
 @media only screen and (max-width: 1600px) {
   .ab {
     padding: 80px 0; }
@@ -1453,15 +1469,7 @@ section {
   .ab__h {
     margin-bottom: 43px; }
   .ab__w {
-    gap: 40px; }
-  .btn {
-    font-size: 17px;
-    height: 70px;
-    padding-left: 30px; }
-  .btn:after {
-    width: 40px;
-    height: 40px;
-    background-size: 31px; } }
+    gap: 40px; } }
 
 @media only screen and (max-width: 1199px) {
   .ab {
@@ -1469,25 +1477,53 @@ section {
 
 @media only screen and (max-width: 991px) {
   .ab__col p {
-    font-size: 17px;
+    font-size: 18px;
     margin-bottom: 14px; }
   .ab__h {
     margin-bottom: 26px;
     font-size: 46px; }
   .ab__w {
     gap: 32px; }
+  .ab__btn-w {
+    margin-top: 37px; } }
+
+@media only screen and (max-width: 767px) {
+  .ab__col p {
+    margin-bottom: 12px; }
+  .ab__w {
+    gap: 30px; }
+  .ab__h {
+    margin-bottom: 18px;
+    font-size: 34px; }
+  .ab__btn-w {
+    margin-top: 30px; } }
+
+@media only screen and (max-width: 640px) {
+  .ab__col p {
+    margin-bottom: 20px; }
+  .ab__w {
+    gap: 19px; } }
+
+@media only screen and (max-width: 575px) {
+  .ab__w {
+    display: block; }
+  .ab__col {
+    width: 100%; }
+  .ab__col + .ab__col {
+    margin-top: 20px; }
+  .btn {
+    font-size: 17px;
+    height: 71px;
+    padding: 0 13px 0 32px; }
+  .btn:after {
+    height: 44px;
+    width: 44px;
+    margin-left: 10px; } }
+
+@media only screen and (max-width: 360px) {
   .btn {
     font-size: 15px;
-    height: 50px;
-    padding-left: 21px;
-    padding-right: 9px; }
-  .ab__btn-w {
-    margin-top: 37px; }
-  .btn:after {
-    width: 33px;
-    height: 33px;
-    background-size: 28px;
-    margin-left: 9px; } }
+    padding: 0 13px 0 24px; } }
 
 @media only screen and (max-width: 320px) {
   body, body > * {
