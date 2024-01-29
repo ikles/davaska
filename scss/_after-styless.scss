@@ -1,3 +1,8 @@
+.popform {
+  position: static;
+  transform: translate(0,0);
+  margin-top: 45px;
+}
 
 .ab,
 .loc,
@@ -41,9 +46,13 @@
   .ab {
     padding: 70px 0;
   }
-
-
-
+  .footer__logo {
+    margin-right: 76px;
+    width: 202px;
+  }
+  .footer__arr-up {
+   margin-right: 120px;
+ }
 }//1199
 
 
@@ -63,7 +72,18 @@
   .ab__btn-w {
     margin-top: 37px;
   }
-  
+  .footer__arr-up {
+   margin-right: 50px;
+ }
+ .footer__logo {
+  margin-right: 65px;
+  width: 165px;
+}
+.footer__ul li a {
+  font-size: 15px;
+}
+
+
 }//991
 
 
@@ -81,7 +101,28 @@
   .ab__btn-w {
     margin-top: 30px;
   }
- 
+  .footer__r,
+  .footer__l,
+  .footer__w {
+    flex-direction: column;    
+    align-items: center;
+  } 
+  .footer__logo,
+  .footer__arr-up {
+    margin-right: unset;
+    margin-bottom: 40px;
+  }
+  .footer__ul li a {
+    display: block;
+    text-align: center;
+  }
+  .footer__l {
+    margin-bottom: 20px;
+  }
+  .footer__logo {
+    width: 220px;
+  }
+  
 }//767
 
 
@@ -110,14 +151,15 @@
   }
   .btn {
     font-size: 17px;
-      height: 71px;
-padding: 0 13px 0 32px;
+    height: 65px;
+    padding: 0 11px 0 32px;
   }
   .btn:after {
     height: 44px;
     width: 44px;
     margin-left: 10px;
   } 
+  
 }//575
 
 
@@ -126,14 +168,16 @@ padding: 0 13px 0 32px;
 }//480
 
 @media only screen and (max-width : 375px) {
-
+  .footer {
+    padding: 50px 0;
+  }
 }//375
 
 @media only screen and (max-width : 360px) {
   .btn {
     font-size: 15px;
     padding: 0 13px 0 24px;
-}
+  }
 }//360
 
 @media only screen and (max-width : 320px) {
