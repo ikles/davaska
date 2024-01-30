@@ -101,6 +101,13 @@ jQuery(document).ready(function( $ ) {
   });
 
 
+  $('.head__menu li a').click(function () {
+    $('body').removeClass("body-open");
+    $('.header__col').removeClass("open"); 
+    $('.burger').removeClass('burger-open');
+  });
+
+
   function tabs(element) {    
     $(element).find('.tabs__list-item').click(function () {
       $(element).find('.tabs__list-item').removeClass('active');
@@ -149,12 +156,6 @@ jQuery(document).ready(function( $ ) {
   let count = 0;
 
 
-  const task = `0. при скролле вниз остановить скрол по сайту на текущей секции и пока не кончатся все элементы не разблокировать его
-  1. посчитать количество элементов li в .ind__ul
-  2. выяснить какой по счету элемент активен
-  3. при скролле и когда значение больше 2 начиная с нуля, переключить активность на следуюущий элемент как у управления, так и у контента
-  4. если активный элемент последний, то разблокировать экран и дать двигаться дальше скролу по сайту
-  5. сделать вверх то же самое. когда скролишь снизу вверх, то заблокировать скрол по сайту. когда дойдет до самого первого то разблокировать скрол по сайту`;
 
 
 
@@ -238,7 +239,7 @@ jQuery(document).ready(function( $ ) {
   });*/
   
 
-/*  var topPos = (($('.ab').offset().top) - 200);
+  var topPos = (($('.ab').offset().top) - 200);
   $(window).scroll(function() {
     var top = $(document).scrollTop();
     if (top > topPos) {
@@ -247,12 +248,12 @@ jQuery(document).ready(function( $ ) {
     else {
       $('.top').removeClass('fixed');     
     }
-  });*/
-
-
-  $('.popform__close').click(function () {
-    $('.popform').fadeOut();
   });
+
+
+  /*$('.popform__close').click(function () {
+    $('.popform').fadeOut();
+  });*/
 
   
 
@@ -386,9 +387,8 @@ $('.eye-3').click(function (e) {
       });
 
     }
-
-    popup('.link2', '.modal-overlay_2', '.modal-close_2');
-    popup('.link', '.modal-overlay_1', '.modal-close_1');
+    
+    popup('a.btn', '.modal-overlay_1', '.modal-close_1');
 
 
     $('a[href*=\\#]:not([href=\\#])').click(function () {

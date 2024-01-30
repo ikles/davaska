@@ -50,6 +50,7 @@
       <div class="top">          
         <div class="contain">
           <div class="menu__row">
+            <span class="burger"></span>
             <a href="index.html" class="logo">                
               <svg class="icon">
                 <use xlink:href="#Logo"></use>
@@ -58,44 +59,46 @@
                 <use xlink:href="#Logo2"></use>
               </svg>
             </a>
-            <div class="head__menu">
-              <ul>
-                <li><a href="#ab">О нас</a></li>
-                <li><a href="#cat">Украшения</a></li>
-                <li><a href="#create">Создать украшение</a></li>
-                <li><a href="#loc">Контакты</a></li>
-              </ul>
+            <div class="header__col">
+              <div class="head__menu">
+                <ul>
+                  <li><a href="#ab">О нас</a></li>
+                  <li><a href="#cat">Украшения</a></li>
+                  <li><a href="#create">Создать украшение</a></li>
+                  <li><a href="#loc">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="head__socs">
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="#inst"></use>
+                  </svg>
+                  <svg class="icon_dark">
+                    <use xlink:href="#inst2"></use>
+                  </svg>
+                </a>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="#fb"></use>
+                  </svg>
+                  <svg class="icon_dark">
+                    <use xlink:href="#fb2"></use>
+                  </svg>
+                </a>
+                <a href="">
+                 <svg class="icon">
+                  <use xlink:href="#you"></use>
+                </svg>
+                <svg class="icon_dark">
+                  <use xlink:href="#you2"></use>
+                </svg>
+              </a>
             </div>
-            <div class="head__socs">
-              <a href="">
-                <svg class="icon">
-                  <use xlink:href="#inst"></use>
-                </svg>
-                <svg class="icon_dark">
-                  <use xlink:href="#inst2"></use>
-                </svg>
-              </a>
-              <a href="">
-                <svg class="icon">
-                  <use xlink:href="#fb"></use>
-                </svg>
-                <svg class="icon_dark">
-                  <use xlink:href="#fb2"></use>
-                </svg>
-              </a>
-              <a href="">
-               <svg class="icon">
-                <use xlink:href="#you"></use>
-              </svg>
-              <svg class="icon_dark">
-                <use xlink:href="#you2"></use>
-              </svg>
-            </a>
           </div>
         </div>          
       </div>          
     </div>
-    <section class="head screen scroll" id="head"">
+    <section class="head screen scroll" id="head">
       <video class="main__video" autoplay="autoplay" loop="loop" preload="auto" muted="muted" poster="img/open-1.jpg" data-object-fit="cover">
         <source src="video/Screen_Video.mp4" type="video/mp4;" codecs="avc1.42E01E, mp4a.40.2">
         </video>
@@ -217,8 +220,10 @@
               </li>
             </ul>
           </div>
-          <div class="jcc">
-            <a href="" class="btn dark"> Связаться с экспертом</a>
+          <div class="jcc">            
+            @@include('var/_btn.html',{
+              "cls":"dark"
+            })
           </div>
         </div>
       </section>
@@ -281,9 +286,10 @@
               <img src="img/ind-16.jpg"/>
             </a>
           </div>
-
-          <div class="jcc">
-            <a href="" class="btn dark"> Связаться с экспертом</a>
+          <div class="jcc">            
+            @@include('var/_btn.html',{
+              "cls":"dark"
+            })
           </div>
         </div>
       </section>
@@ -389,6 +395,7 @@
       </section>
       <section class="loc" id="loc">
         <div class="contain">
+          <div class="loc_title show-575">Контакты</div>
           <div class="loc__w">
             <div class="loc__col">
               <a class="loc__img-w"><img src="img/loc.jpeg" class="loc__img" /></a>
@@ -404,19 +411,6 @@
               "cls":"dark"
             })
           </div>
-          <form class="popform">
-            <span class="popform__close"></span>
-            <div class="popform__txt">
-              Благодарим Вас за интерес к нашему бренду! Пожалуйста, заполните форму, мы свяжемся с вами в течение 24 часов. Вы также можете связаться с нами напрямую по телефону или электронной почте. <br />
-              С нетерпением ждем сотрудничества с вами!
-            </div>
-            <input type="text" placeholder="Ваше имя" />
-            <input type="text" placeholder="e-mail" />
-            <input type="text" placeholder="телефон" required />
-            <div class="popform__btn-w">
-              <button class="btn">Отправить</button>
-            </div>
-          </form>
 
         </div>
       </section>
@@ -468,6 +462,30 @@
 </div>
 <!--wrapper-->
 @@include('var/_scripts.html')
+
+
+<div class="modal-overlay modal-overlay_1">        
+  <div class="modal-form__layout"></div>
+  <div class="modal-form__block">     
+    <span class="modal-close modal-close_1 popform__close"></span>
+    <div class="modal-form__inner">
+      <form class="popform">        
+        <div class="popform__txt">
+          Благодарим Вас за интерес к нашему бренду! Пожалуйста, заполните форму, мы свяжемся с вами в течение 24 часов. Вы также можете связаться с нами напрямую по телефону или электронной почте. <br />
+          С нетерпением ждем сотрудничества с вами!
+        </div>
+        <input type="text" placeholder="Ваше имя" />
+        <input type="text" placeholder="e-mail" />
+        <input type="text" placeholder="телефон" required />
+        <div class="popform__btn-w">
+          <button class="btn">Отправить</button>
+        </div>
+      </form>      
+    </div>
+  </div>
+</div><!--modal-overlay-->
+
+
 </body>
 </html>
 
