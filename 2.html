@@ -12,7 +12,7 @@
     height: 100vh;
     background-color: red;    
     min-width: calc(100% - 220px) !important;
-    width: 100%; /* Исходная ширина */
+    width: 100%;
     transition: border-radius 0.3s, width 0.3s;
     margin: 0 auto;
   }
@@ -35,31 +35,27 @@
   jQuery(document).ready(function( $ ) {
 
 
-    var maxRadius = 30;
-    var maxWidthPercent = 80;
-    var deltaSum = 0;
-    var lastScrollTop = 0;
+ var maxRadius = 30; // Максимальный радиус
+    var scrollThreshold = 100; // Высота прокрутки для полного изменения радиуса
+    var scrollLocked = true; // Флаг блокировки прокрутки
 
-    function updateHeader(scrollDelta) {
-      deltaSum = Math.max(0, Math.min(deltaSum + scrollDelta, maxRadius * 15));
-      var newRadius = deltaSum / 15;
-      var newWidth = 100 - (20 * (newRadius / maxRadius));
-
-      $('header').css({
-        'border-radius': newRadius + 'px',
-        'width': newWidth + '%'
-      });
+    function updateHeader(scrollTop) {
+      var radius = Math.min(maxRadius, (scrollTop / scrollThreshold) * maxRadius);
+      $('header').css('border-radius', radius + 'px');
+      if (radius >= maxRadius) {
+        scrollLocked = false;
+      }
     }
 
-    window.addEventListener("wheel", function(e) {
-      var st = $(this).scrollTop();
-    if (st > lastScrollTop){ // Вниз
-      updateHeader(Math.abs(e.deltaY));
-    } else { // Вверх
-      updateHeader(-Math.abs(e.deltaY));
-    }
-    lastScrollTop = st <= 0 ? 0 : st; // Обновляем lastScrollTop
-  }, {passive: false});
+    $(window).on('scroll', function() {
+      var scrollTop = $(this).scrollTop();
+      if (scrollLocked) {
+        updateHeader(scrollTop);
+        window.scrollTo(0, 0); // Блокируем прокрутку
+      }
+    });
+
+
 
 });//ready
 </script>

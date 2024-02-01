@@ -1,0 +1,64 @@
+  ///Вот код при котором страница заблокирована при скролле пока радиус
+  не дойдет до 30px, а ширина до 80%
+
+ jQuery(document).ready(function( $ ) {
+  var maxRadius = 30; // Максимальный радиус
+  var maxWidthPercent = 80; // Максимальная ширина в процентах
+  var deltaSum = 0; // Суммарное значение прокрутки
+
+  var wheelHandler = function(e) {
+    if ($(window).scrollTop() === 0) { // Проверяем, что мы в начале страницы
+      e.preventDefault(); // Блокируем прокрутку
+
+      if (e.deltaY > 0) { // Проверяем, что прокрутка идет вниз
+        deltaSum += Math.abs(e.deltaY); // Увеличиваем суммарное значение прокрутки
+        var newRadius = Math.min(maxRadius, deltaSum / 15); // Вычисляем новый радиус
+        var newWidth = 100 - (20 * (newRadius / maxRadius)); // Вычисляем новую ширину
+
+        $('header').css({
+          'border-radius': newRadius + 'px',
+          'width': newWidth + '%' // Устанавливаем новую ширину
+        });
+      }
+    }
+
+    if (deltaSum >= maxRadius * 15) {
+      window.removeEventListener('wheel', wheelHandler, {passive: false}); // Удаляем обработчик события при достижении максимума
+    }
+  };
+
+  // Добавляем обработчик события
+  window.addEventListener('wheel', wheelHandler, {passive: false});
+});//ready
+  
+
+//Вот код при котором при скролле вниз и вверх меняются нужные показатели но страница при скролле вниз не блокируется
+
+jQuery(document).ready(function( $ ) {
+ var maxRadius = 30;
+    var maxWidthPercent = 80;
+    var deltaSum = 0;
+    var lastScrollTop = 0;
+
+    function updateHeader(scrollDelta) {
+      deltaSum = Math.max(0, Math.min(deltaSum + scrollDelta, maxRadius * 15));
+      var newRadius = deltaSum / 15;
+      var newWidth = 100 - (20 * (newRadius / maxRadius));
+
+      $('header').css({
+        'border-radius': newRadius + 'px',
+        'width': newWidth + '%'
+      });
+    }
+
+    window.addEventListener("wheel", function(e) {
+      var st = $(this).scrollTop();
+    if (st > lastScrollTop){ // Вниз
+      updateHeader(Math.abs(e.deltaY));
+    } else { // Вверх
+      updateHeader(-Math.abs(e.deltaY));
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // Обновляем lastScrollTop
+  }, {passive: false});
+});//ready
+
